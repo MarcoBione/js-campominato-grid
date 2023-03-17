@@ -17,3 +17,41 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 */
 
+//load play button
+const btnPlay = document.querySelector('form');
+btnPlay.addEventListener('submit', startGame);
+//check load correctly
+console.log(btnPlay);
+
+//game initializing
+function startGame(e){
+    //prevent form submit
+    e.preventDefault();
+
+    //load user difficulty level
+    const userDiff = document.querySelector('select').value;
+    console.log(userDiff);
+
+    //dowload user difficulty
+    let gameDiff =0;
+
+    //switch case for user difficulty
+    switch(userDiff){
+
+        //easy
+        case "easy" : 
+        gameDiff = 100;
+        break;
+
+        //medium
+        case "medium" : 
+        gameDiff = 81;
+        break;
+
+        //hard
+        case "hard" : 
+        gameDiff = 49;
+        break;
+    }
+    console.log(gameDiff);
+}
