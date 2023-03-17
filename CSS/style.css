@@ -19,7 +19,10 @@ main{
     height: calc(100% - 160px);
 }
 
-.boxestyle{
-    border: 1px solid black;
+.boxstyle{
     background-color: transparent;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

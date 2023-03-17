@@ -55,10 +55,33 @@ function startGame(e){
     }
     console.log(gameDiff);
 
+    //number of boxes x Row
+    let boxesNumberRow = Math.sqrt(gameDiff);
+    console.log(boxesNumberRow);
+
+    //cycle stamp
+    for(let i = 1; i <= gameDiff; i++){
+        const boxes = createBoxes(i, boxesNumberRow);
+        document.getElementById('playarea').appendChild(boxes);
+
+    }
+
+
+
     //generating cubes
-    const boxes = document.createElement('div');
-    boxes.classList.add('.boxstyle');
-    boxes.innerText ="1"
-    document.getElementById('playarea').appendChild('boxes');
+    function createBoxes(index , userDiff){
+
+        const boxes = document.createElement('div');
+        //box style print
+        boxes.classList.add('boxstyle');
+        //box dimensions
+        boxes.style.width = `calc(100% / ${userDiff})`
+        boxes.style.height = boxes.style.width;
+        //content of the boxes
+        boxes.innerText =index;
+        //return boxes element
+        return boxes;
+    }
+    
     
 }
