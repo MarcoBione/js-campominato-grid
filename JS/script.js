@@ -54,4 +54,11 @@ function startGame(e){
         break;
     }
     console.log(gameDiff);
+
+    //generating cubes
+    const boxes = document.createElement('div');
+    boxes.classList.add('.boxstyle');
+    boxes.innerText ="1"
+    document.getElementById('playarea').appendChild('boxes');
+    
 }
