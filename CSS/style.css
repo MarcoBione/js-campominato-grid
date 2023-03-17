@@ -26,3 +26,8 @@ main{
     justify-content: center;
     align-items: center;
 }
+
+.playarea{
+    width: 500px;
+    height: 500px;
+}
