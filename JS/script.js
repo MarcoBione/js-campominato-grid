@@ -59,14 +59,14 @@ function startGame(e){
     let boxesNumberRow = Math.sqrt(gameDiff);
     console.log(boxesNumberRow);
 
+    document.getElementById('playarea').innerHTML='';
+
     //cycle stamp
     for(let i = 1; i <= gameDiff; i++){
         const boxes = createBoxes(i, boxesNumberRow);
         document.getElementById('playarea').appendChild(boxes);
 
     }
-
-
 
     //generating cubes
     function createBoxes(index , userDiff){
