@@ -64,6 +64,9 @@ function startGame(e){
     //cycle stamp
     for(let i = 1; i <= gameDiff; i++){
         const boxes = createBoxes(i, boxesNumberRow);
+        boxes.addEventListener('click', function safe(){
+            boxes.classList.add('safe'); //add safe color to safe boxes
+        });
         document.getElementById('playarea').appendChild(boxes);
 
     }

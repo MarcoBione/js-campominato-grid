@@ -32,3 +32,7 @@ main{
     width: 500px;
     height: 500px;
 }
+
+.safe{
+    background-color: darkgreen;
+}
